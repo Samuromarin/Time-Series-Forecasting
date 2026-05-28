@@ -1,10 +1,12 @@
-# Retail Sales Forecasting 📈
+# Time Series Forecasting — Retail Sales
+
+**Personal Project · Prophet · SARIMAX · XGBoost**
 
 End-to-end time series forecasting project applied to **TodoVentas S.A.**, an online retail company operating across 10 European countries. The goal is to generate a sales forecast for December 2023 to support a capital increase decision.
 
 ---
 
-## 🏢 Business Context
+## Business Context
 
 The finance team needs a December 2023 sales estimate broken down by country to present to shareholders.
 
@@ -12,40 +14,49 @@ The finance team needs a December 2023 sales estimate broken down by country to 
 
 ---
 
-## 📊 Dataset
+## Dataset
 
-Daily sales data from December 2022 to December 2023 (`retail_todo_ventas.csv`), with transactions across 10 European countries. After filtering out returns and zero-sales days, data is aggregated to weekly frequency.
+Daily sales data from December 2022 to December 2023, with transactions across 10 European countries. After filtering out returns and zero-sales days, data is aggregated to weekly frequency.
 
 > The dataset is not included in this repository.
 
 ---
 
-## 🔬 Methodology
+## Notebook
+
+| | |
+|---|---|
+| retail_sales_forecasting.ipynb | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Samuromarin/Time-Series-Forecasting/blob/main/retail_sales_forecasting.ipynb) |
+
+---
+
+## Methodology
 
 The analysis focuses on the UK market (93% of sales) and applies the selected model to 9 international markets.
 
 **Pipeline:**
-
-    Daily data → EDA + descriptive analysis → Stationarity tests (ADF) + ACF/PACF
-    → Train/test split (last 4 weeks as holdout) → Three models trained and evaluated
-    → Best model selected → Final forecast for December 2023
+```
+Daily data → EDA + descriptive analysis → Stationarity tests (ADF) + ACF/PACF
+→ Train/test split (last 4 weeks as holdout) → Three models trained and evaluated
+→ Best model selected → Final forecast for December 2023
+```
 
 ---
 
-## 🤖 Models
+## Models
 
 | Model | Description |
-|-------|-------------|
+|---|---|
 | **Prophet** | Meta's forecasting library for time series with trend and seasonality |
 | **SARIMAX** | Classical statistical model with orders selected via `auto_arima` |
 | **XGBoost** | Gradient boosting adapted to time series via `sktime` with recursive strategy |
 
 ---
 
-## 📈 Results
+## Results
 
 | Model | RMSE | MAPE |
-|-------|------|------|
+|---|---|---|
 | Prophet | 118,111 | 37.72% |
 | SARIMAX | 49,995 | 14.37% |
 | XGBoost | 62,046 | 16.55% |
@@ -58,15 +69,7 @@ The analysis focuses on the UK market (93% of sales) and applies the selected mo
 
 ---
 
-## 📁 Project Structure
-
-    ├── retail_sales_forecasting.ipynb    # Main notebook
-    ├── retail_todo_ventas.csv            # Sales dataset
-    └── prod_dict.csv                     # Product dictionary
-
----
-
-## ▶️ How to Run
+## How to Run
 
 1. Clone the repository
 2. Install dependencies:
@@ -78,6 +81,6 @@ pip install pandas numpy matplotlib seaborn plotly statsmodels pmdarima prophet 
 
 ---
 
-## 🛠️ Stack
+## Tech Stack
 
 `Python` · `Pandas` · `Prophet` · `Statsmodels` · `SARIMAX` · `XGBoost` · `sktime` · `Plotly`
