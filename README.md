@@ -1,6 +1,6 @@
 # Time Series Forecasting — Retail Sales
 
-**Personal Project · Prophet · SARIMAX · XGBoost**
+**Prophet · SARIMAX · XGBoost**
 
 End-to-end time series forecasting project applied to **TodoVentas S.A.**, an online retail company operating across 10 European countries. The goal is to generate a sales forecast for December 2023 to support a capital increase decision.
 
