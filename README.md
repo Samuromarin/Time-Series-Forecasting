@@ -1,4 +1,4 @@
-# Time Series Forecasting — Retail Sales
+# Time Series Forecasting
 
 **Prophet · SARIMAX · XGBoost**
 
